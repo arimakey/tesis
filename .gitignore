@@ -1,0 +1,17 @@
+# Artefactos de compilación LaTeX/LyX
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+main.pdf
+main.pdf-1
+*.lyx~

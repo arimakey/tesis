@@ -1,0 +1,27 @@
+CÓMO GUARDAR LOS LIBROS / PDFs AQUÍ
+====================================
+
+Convención de nombres (la misma que usa la columna "Archivo en libros/" del
+archivo referencias\registro_referencias.csv):
+
+    Apellido_Año_TituloCorto.pdf
+
+Ejemplos:
+    hastie_2009_elements_statistical_learning.pdf
+    geron_2019_hands_on_machine_learning.pdf
+    ratcliffe_2008_intelligence_led_policing.pdf
+
+Reglas:
+- Sin espacios ni caracteres especiales (usa _ en lugar de espacios).
+- Apellido del primer autor, en minúsculas.
+- Mantén el nombre igual al que anotas en el CSV para poder encontrar
+  el PDF al instante desde la hoja de referencias.
+
+PASOS RÁPIDOS:
+1. Copia aquí los PDFs de los libros que uses.
+2. Abre referencias\registro_referencias.csv.
+3. Añade una fila por fuente: clave, autor, año, título, de qué libro
+   viene, capítulo, y escribe el nombre exacto del PDF en la columna
+   "Archivo en libros/".
+4. La clave (columna "Clave") debe ser la misma que usas para citar en
+   LaTeX: \parencite{clave}  ->  (Autor, año)  al final.

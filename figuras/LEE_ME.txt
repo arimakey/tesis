@@ -1,0 +1,10 @@
+Aquí van las figuras, mapas, diagramas e imágenes de la tesis.
+
+Para usarlas en LaTeX:
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figuras/mapa_patrones.png}
+    \caption{Mapa de patrones espaciales de criminalidad en Trujillo.}
+    \label{fig:mapa_patrones}
+\end{figure}
