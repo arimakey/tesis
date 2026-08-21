@@ -12,6 +12,8 @@
 *.synctex.gz
 *.fls
 *.fdb_latexmk
+# .tex generados por LyX al exportar/compilar
+*.tex
 main.pdf
 main.pdf-1
 *.lyx~
