@@ -6,8 +6,8 @@ Autores: Jefferson Miguel Peña Serrano y Martin Aryan Robles Perez.
 
 ## Estructura
 
-- `main.lyx` — documento maestro (LyX 2.5), numeración de capítulos por carpeta y secciones por archivo.
-- `1_Introduccion/` ... `6_Conclusiones/` — capítulos (cada carpeta = capítulo; cada archivo = sección).
+- `main.tex` — documento maestro. Cada carpeta = capítulo (numeración mayor: 1., 2., ...); cada archivo dentro = sección (numeración menor: 1.1, 1.2, ...).
+- `1_Introduccion/` ... `6_Conclusiones/` — capítulos.
 - `referencias/bibliografia.bib` — bibliografía (biblatex, estilo APA, biber).
 - `referencias/registro_referencias.csv` — gestor rápido de referencias (autor, libro, estado, archivo).
 - `libros/` — PDFs de los libros (convención: `Apellido_Año_TituloCorto.pdf`).
@@ -15,6 +15,15 @@ Autores: Jefferson Miguel Peña Serrano y Martin Aryan Robles Perez.
 
 ## Cómo trabajar
 
-1. Abrir `main.lyx` en LyX 2.5 (carga portada, resumen, capítulos y bibliografía).
-2. Escribir en cada sección (archivo `.lyx`). Los archivos `.tex` son temporales: LyX los genera al compilar.
-3. Generar el PDF con el botón **Ver** (LyX corre pdflatex + biber para la bibliografía APA).
+Editor recomendado: **TeXstudio**.
+
+1. Abrir `main.tex`.
+2. Escribir en cada sección (los `.tex` dentro de cada carpeta de capítulo).
+3. Compilar: **F6** (pdflatex) → **F11** (biber) → **F6** → **F6**. La bibliografía requiere biber por el estilo APA.
+
+Para citar en el texto: `\parencite{clave}` → genera (Autor, año). La clave debe existir en `referencias/bibliografia.bib` y en el CSV.
+
+## Gestión de referencias
+
+- `referencias/registro_referencias.csv` — cada fila es una fuente: clave, autores, año, título, de qué libro/revista viene, capítulo, editorial, nombre del PDF en `libros/` y estado (pendiente / en lectura / citado en tesis).
+- `libros/` — guarda los PDFs como `Apellido_Año_TituloCorto.pdf`, con el mismo nombre en la columna `Archivo en libros/` del CSV.

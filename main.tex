@@ -1,0 +1,75 @@
+% !TEX program = pdflatex
+% !BIB program = biber
+%
+% Tesis: Modelo de aprendizaje automático para la identificación y
+% clasificación de patrones espaciales de criminalidad en el área
+% urbana de Trujillo.
+%
+% Compilar en TeXstudio: F6 (pdflatex) -> F11 (biber) -> F6 -> F6
+% (la bibliografía necesita biber porque se usa estilo APA).
+
+\documentclass[12pt,a4paper,oneside]{report}
+
+% ============================================================
+% PAQUETES
+% ============================================================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{csquotes}
+\usepackage{setspace}
+\onehalfspacing
+% caption se carga para cooperar con hyperref y evitar el error
+% de hooks de LaTeX con el núcleo actual.
+\usepackage{caption}
+
+% ============================================================
+% BIBLIOGRAFÍA ESTILO APA (compilar con biber)
+% ============================================================
+\usepackage[style=apa,backend=biber,sorting=nyt]{biblatex}
+\addbibresource{referencias/bibliografia.bib}
+
+\usepackage[hidelinks]{hyperref}
+
+% ============================================================
+% DATOS DE LA TESIS  (TODO: completar)
+% ============================================================
+\newcommand{\tesisTitulo}{Modelo de aprendizaje automático para la identificación y clasificación de patrones espaciales de criminalidad en el área urbana de Trujillo}
+\newcommand{\tesisAutor}{Jefferson Miguel Peña Serrano y Martin Aryan Robles Perez}
+\newcommand{\tesisAsesor}{Nombre del Asesor}
+\newcommand{\tesisUniversidad}{Universidad Nacional de Trujillo}
+\newcommand{\tesisFacultad}{Facultad de ...}
+\newcommand{\tesisCarrera}{Escuela Profesional de ...}
+\newcommand{\tesisTituloProfesional}{Ingeniero ...}
+\newcommand{\tesisFecha}{2026}
+
+% ============================================================
+% DOCUMENTO
+% ============================================================
+\begin{document}
+
+\input{portada}
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\input{resumen}
+
+% Cada carpeta = capítulo (numeración mayor: 1., 2., ...)
+% Cada archivo dentro = sección (numeración menor: 1.1, 1.2, ...)
+\include{1_Introduccion/capitulo}
+\include{2_Marco_Teorico/capitulo}
+\include{3_Metodologia/capitulo}
+\include{4_Resultados/capitulo}
+\include{5_Discusion/capitulo}
+\include{6_Conclusiones/capitulo}
+
+\printbibliography[heading=bibintoc,title={Referencias bibliográficas}]
+
+\end{document}
